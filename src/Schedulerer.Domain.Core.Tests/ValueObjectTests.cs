@@ -11,7 +11,7 @@ namespace Schedulerer.Domain.Core.Tests
     {
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTestValueObjects_GivenEqualValueObjects_Equals(int first, int second)
+        public void Compare_GivenStructurallyEqualValueObjects_Equal(int first, int second)
         {
             var one = new TestValueObject(first, second);
             var two = new TestValueObject(first, second);
@@ -24,7 +24,7 @@ namespace Schedulerer.Domain.Core.Tests
         }
 
         [Fact]
-        public void CompareTestValueObjects_GivenTwoNullValueObjects_Equals()
+        public void Compare_GivenTwoNullValueObjects_Equal()
         {
             TestValueObject one = null;
             TestValueObject two = null;
@@ -37,7 +37,7 @@ namespace Schedulerer.Domain.Core.Tests
 
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTestValueObjects_GivenUnequalValueObjects_NotEquals(int first, int second)
+        public void Compare_GivenUnequalValueObjects_NotEqual(int first, int second)
         {
             var one = new TestValueObject(first, second);
             var two = new TestValueObject(second, first);
@@ -50,7 +50,7 @@ namespace Schedulerer.Domain.Core.Tests
 
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTestValueObjects_GivenFirstNullValueObject_NotEquals(int first, int second)
+        public void Compare_GivenFirstNullValueObject_NotEqual(int first, int second)
         {
             TestValueObject one = null;
             var two = new TestValueObject(first, second);
@@ -63,7 +63,7 @@ namespace Schedulerer.Domain.Core.Tests
 
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTestValueObjects_GivenSecondNullValueObject_NotEquals(int first, int second)
+        public void Compare_GivenSecondNullValueObject_NotEqual(int first, int second)
         {
             var one = new TestValueObject(first, second);
             TestValueObject two = null;
@@ -71,14 +71,14 @@ namespace Schedulerer.Domain.Core.Tests
             one.Should().NotBeEquivalentTo(two);
             one.Should().NotBe(two);
             one.Should().NotBe(null);
-            one.Equals(null).Should().BeFalse();
+            one.Equal(null).Should().BeFalse();
             (one == two).Should().BeFalse();
             (one != two).Should().BeTrue();
         }
 
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTestValueObjects_GivenDifferentType_NotEquals(int first, int second)
+        public void Compare_GivenDifferentType_NotEqual(int first, int second)
         {
             var one = new TestValueObject(first, second);
             var two = new { Id = 123 };

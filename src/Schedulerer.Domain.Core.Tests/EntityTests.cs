@@ -11,7 +11,7 @@ namespace Schedulerer.Domain.Core.Tests
     {
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTwoEntityTestEntities_GivenValidEntities_Equal(Guid id, string title, decimal price)
+        public void Compare_GivenTestEntitiesWithSameIdentity_Equal(Guid id, string title, decimal price)
         {
             var one = new TestEntity(id, title, price);
             var two = new TestEntity(id, $"{title}2", price * 20);
@@ -26,7 +26,7 @@ namespace Schedulerer.Domain.Core.Tests
 
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTwoEntityTestEntities_GivenSameReferenceEntities_Equal(Guid id, string title, decimal price)
+        public void Compare_GivenSameReferences_Equal(Guid id, string title, decimal price)
         {
             var one = new TestEntity(id, title, price);
             var two = one;
@@ -41,7 +41,7 @@ namespace Schedulerer.Domain.Core.Tests
         }
 
         [Fact]
-        public void CompareTwoEntityTestEntities_GivenBothNullEntities_Equal()
+        public void Compare_GivenBothNullEntities_Equal()
         {
             TestEntity one = null;
             TestEntity two = null;
@@ -54,7 +54,7 @@ namespace Schedulerer.Domain.Core.Tests
 
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTwoEntityTestEntities_GivenFirstNullEntity_NotEqual(Guid id, string title, decimal price)
+        public void Compare_GivenFirstNullEntity_NotEqual(Guid id, string title, decimal price)
         {
             TestEntity one = null;
             var two = new TestEntity(id, title, price);
@@ -68,7 +68,7 @@ namespace Schedulerer.Domain.Core.Tests
 
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTwoEntityTestEntities_GivenSecondNullEntity_NotEqual(Guid id, string title, decimal price)
+        public void Compare_GivenSecondNullEntity_NotEqual(Guid id, string title, decimal price)
         {
             var one = new TestEntity(id, title, price);
             TestEntity two = null;
@@ -84,7 +84,7 @@ namespace Schedulerer.Domain.Core.Tests
 
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTwoEntityTestEntities_GivenSecondRandomObject_NotEqual(Guid id, string title, decimal price)
+        public void Compare_GivenObjectWithSameIdentity_NotEqual(Guid id, string title, decimal price)
         {
             var one = new { Id = id };
             var two = new TestEntity(id, title, price);
@@ -95,7 +95,7 @@ namespace Schedulerer.Domain.Core.Tests
 
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTwoEntityTestEntities_GivenDefaultKeysObject_NotEqual(Guid id, string title, decimal price)
+        public void Compare_GivenDefaultIdentities_NotEqual(Guid id, string title, decimal price)
         {
             var one = new TestEntity(default, title, price);
             var two = new TestEntity(default, title, price);
@@ -108,7 +108,7 @@ namespace Schedulerer.Domain.Core.Tests
 
         [Theory]
         [MemberData(nameof(Data))]
-        public void CompareTwoEntityTestEntities_GivenDifferentIdClasses_NotEqual(Guid id, string title, decimal price)
+        public void Compare_GivenDifferentClassWithSameIdentity_NotEqual(Guid id, string title, decimal price)
         {
             var one = new TestEntity(id, title, price);
             var two = new DifferentTestEntity(id, title, price);
