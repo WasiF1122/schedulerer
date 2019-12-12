@@ -71,7 +71,7 @@ namespace Schedulerer.Domain.Core.Tests
             one.Should().NotBeEquivalentTo(two);
             one.Should().NotBe(two);
             one.Should().NotBe(null);
-            one.Equal(null).Should().BeFalse();
+            one.Equals(null).Should().BeFalse();
             (one == two).Should().BeFalse();
             (one != two).Should().BeTrue();
         }
@@ -94,8 +94,8 @@ namespace Schedulerer.Domain.Core.Tests
 
         private class TestValueObject : ValueObject
         {
-            public int One { get; }
-            public int Two { get; }
+            private int One { get; }
+            private int Two { get; }
 
             public TestValueObject(int one, int two)
             {
