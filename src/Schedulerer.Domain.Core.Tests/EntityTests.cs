@@ -18,7 +18,6 @@ namespace Schedulerer.Domain.Core.Tests
 
             one.Should().BeEquivalentTo(two);
             one.Should().Be(two);
-            one.Equals(two).Should().BeTrue();
             one.GetHashCode().Should().Be(two.GetHashCode());
             (one == two).Should().BeTrue();
             (one != two).Should().BeFalse();
@@ -34,7 +33,6 @@ namespace Schedulerer.Domain.Core.Tests
             one.Should().BeEquivalentTo(two);
             one.Should().BeSameAs(two);
             one.Should().Be(two);
-            one.Equals(two).Should().BeTrue();
             one.GetHashCode().Should().Be(two.GetHashCode());
             (one == two).Should().BeTrue();
             (one != two).Should().BeFalse();
@@ -77,7 +75,6 @@ namespace Schedulerer.Domain.Core.Tests
             one.Should().NotBeSameAs(two);
             one.Should().NotBe(two);
             one.Should().NotBe(null);
-            one.Equals(null).Should().BeFalse();
             (one == two).Should().BeFalse();
             (one != two).Should().BeTrue();
         }
@@ -86,7 +83,7 @@ namespace Schedulerer.Domain.Core.Tests
         [MemberData(nameof(Data))]
         public void Compare_GivenObjectWithSameIdentity_NotEqual(Guid id, string title, decimal price)
         {
-            var one = new { Id = id };
+            var one = new {Id = id};
             var two = new TestEntity(id, title, price);
 
             one.Should().NotBeEquivalentTo(two);
@@ -94,8 +91,8 @@ namespace Schedulerer.Domain.Core.Tests
         }
 
         [Theory]
-        [MemberData(nameof(Data))]
-        public void Compare_GivenDefaultIdentities_NotEqual(Guid id, string title, decimal price)
+        [InlineData("title", 12)]
+        public void Compare_GivenDefaultIdentities_NotEqual(string title, decimal price)
         {
             var one = new TestEntity(default, title, price);
             var two = new TestEntity(default, title, price);
@@ -116,39 +113,38 @@ namespace Schedulerer.Domain.Core.Tests
             one.Should().NotBeEquivalentTo(two);
             one.Should().NotBeSameAs(two);
             one.Should().NotBe(two);
-            one.Equals(two).Should().BeFalse();
             (one == two).Should().BeFalse();
             (one != two).Should().BeTrue();
         }
 
         public static IEnumerable<object[]> Data => new List<object[]>
         {
-            new object[] { Guid.NewGuid(), $"title-{Guid.NewGuid().ToString()}", new Random().NextDouble() * 1000 }
+            new object[] {Guid.NewGuid(), $"title-{Guid.NewGuid().ToString()}", new Random().NextDouble() * 1000}
         };
 
         private class TestEntity : Entity
         {
-            public string EntityTitle { get; set; }
-            public decimal EntityPrice { get; set; }
+            private string Title { get; }
+            private decimal Price { get; }
 
             public TestEntity(Guid id, string title, decimal price)
             {
                 Id = id;
-                EntityTitle = title;
-                EntityPrice = price;
+                Title = title;
+                Price = price;
             }
         }
 
         private class DifferentTestEntity : Entity
         {
-            public string EntityTitle { get; set; }
-            public decimal EntityPrice { get; set; }
+            private string Title { get; }
+            private decimal Price { get; }
 
             public DifferentTestEntity(Guid id, string title, decimal price)
             {
                 Id = id;
-                EntityTitle = title;
-                EntityPrice = price;
+                Title = title;
+                Price = price;
             }
         }
     }

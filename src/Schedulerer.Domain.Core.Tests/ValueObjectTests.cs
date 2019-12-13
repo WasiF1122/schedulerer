@@ -23,18 +23,6 @@ namespace Schedulerer.Domain.Core.Tests
             (one != two).Should().BeFalse();
         }
 
-        [Fact]
-        public void Compare_GivenTwoNullValueObjects_Equal()
-        {
-            TestValueObject one = null;
-            TestValueObject two = null;
-
-            one.Should().BeEquivalentTo(two);
-            one.Should().Be(two);
-            (one == two).Should().BeTrue();
-            (one != two).Should().BeFalse();
-        }
-
         [Theory]
         [MemberData(nameof(Data))]
         public void Compare_GivenUnequalValueObjects_NotEqual(int first, int second)
@@ -71,7 +59,6 @@ namespace Schedulerer.Domain.Core.Tests
             one.Should().NotBeEquivalentTo(two);
             one.Should().NotBe(two);
             one.Should().NotBe(null);
-            one.Equals(null).Should().BeFalse();
             (one == two).Should().BeFalse();
             (one != two).Should().BeTrue();
         }
@@ -81,7 +68,7 @@ namespace Schedulerer.Domain.Core.Tests
         public void Compare_GivenDifferentType_NotEqual(int first, int second)
         {
             var one = new TestValueObject(first, second);
-            var two = new { Id = 123 };
+            var two = new {Id = 123};
 
             one.Should().NotBeEquivalentTo(two);
             one.Should().NotBe(two);
@@ -89,7 +76,7 @@ namespace Schedulerer.Domain.Core.Tests
 
         public static IEnumerable<object[]> Data => new List<object[]>
         {
-            new object[] { new Random().Next(), new Random().Next() }
+            new object[] {new Random().Next(), new Random().Next()}
         };
 
         private class TestValueObject : ValueObject

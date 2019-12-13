@@ -18,6 +18,10 @@ ProjectSection(SolutionItems) = preProject
 	..\LICENSE = ..\LICENSE
 EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schedulerer.Enums", "Schedulerer.Enums\Schedulerer.Enums.csproj", "{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{420CFEC9-D091-40C1-8070-25C66C484AE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,5 +83,21 @@ Global
 		{67C38F83-A62F-4EF2-ACF6-D7CDFCB69BC3}.Release|x64.Build.0 = Release|Any CPU
 		{67C38F83-A62F-4EF2-ACF6-D7CDFCB69BC3}.Release|x86.ActiveCfg = Release|Any CPU
 		{67C38F83-A62F-4EF2-ACF6-D7CDFCB69BC3}.Release|x86.Build.0 = Release|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Debug|x64.Build.0 = Debug|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Debug|x86.Build.0 = Debug|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Release|x64.ActiveCfg = Release|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Release|x64.Build.0 = Release|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Release|x86.ActiveCfg = Release|Any CPU
+		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC251FD7-A170-40F7-B6A8-F373046D4E6B} = {420CFEC9-D091-40C1-8070-25C66C484AE4}
+		{67C38F83-A62F-4EF2-ACF6-D7CDFCB69BC3} = {420CFEC9-D091-40C1-8070-25C66C484AE4}
 	EndGlobalSection
 EndGlobal

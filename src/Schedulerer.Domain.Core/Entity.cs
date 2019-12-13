@@ -9,9 +9,7 @@ namespace Schedulerer.Domain.Core
 
         public override bool Equals(object obj)
         {
-            var other = obj as Entity;
-
-            if (other is null)
+            if (!(obj is Entity other))
             {
                 return false;
             }
