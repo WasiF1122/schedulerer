@@ -22,6 +22,8 @@ namespace Schedulerer.Domain.Core
 
             var valueObject = (ValueObject) obj;
 
+            var aha = GetEqualityComponents().SequenceEqual(valueObject.GetEqualityComponents());
+            
             return GetEqualityComponents().SequenceEqual(valueObject.GetEqualityComponents());
         }
 

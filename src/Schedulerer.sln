@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schedulerer.Enums", "Schedu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{420CFEC9-D091-40C1-8070-25C66C484AE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schedulerer.Domain.Tests", "Schedulerer.Domain.Tests\Schedulerer.Domain.Tests.csproj", "{D72FE884-392D-494B-8E0E-AFA690794881}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,18 @@ Global
 		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Release|x64.Build.0 = Release|Any CPU
 		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Release|x86.ActiveCfg = Release|Any CPU
 		{D8A497BA-AEF2-4A80-9814-4DF1E6E6BAC0}.Release|x86.Build.0 = Release|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Debug|x64.Build.0 = Debug|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Debug|x86.Build.0 = Debug|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Release|x64.ActiveCfg = Release|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Release|x64.Build.0 = Release|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Release|x86.ActiveCfg = Release|Any CPU
+		{D72FE884-392D-494B-8E0E-AFA690794881}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BC251FD7-A170-40F7-B6A8-F373046D4E6B} = {420CFEC9-D091-40C1-8070-25C66C484AE4}
