@@ -13,7 +13,33 @@
     <e p="$PROJECT_DIR$/../LICENSE" t="Include" />
     <e p="$PROJECT_DIR$/../README.md" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
-      <e p="Core" t="Include" />
+      <e p="Schedulerer.Application" t="IncludeRecursive">
+        <e p="Children" t="Include">
+          <e p="ChildViewModel.cs" t="Include" />
+          <e p="Queries" t="Include" />
+        </e>
+        <e p="Schedulerer.Application.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Schedulerer.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Schedulerer.Application.Tests" t="IncludeRecursive">
+        <e p="Schedulerer.Application.Tests.csproj" t="IncludeRecursive" />
+        <e p="UnitTest1.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Schedulerer.Application.Tests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="Schedulerer.Domain" t="IncludeRecursive">
         <e p="Activity.cs" t="Include" />
         <e p="Age.cs" t="Include" />
@@ -84,8 +110,9 @@
         </e>
       </e>
       <e p="Schedulerer.Infrastructure" t="IncludeRecursive">
-        <e p="Class1.cs" t="Include" />
+        <e p="ChildConfiguration.cs" t="Include" />
         <e p="Schedulerer.Infrastructure.csproj" t="IncludeRecursive" />
+        <e p="SchedulererDbContext.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -95,8 +122,50 @@
           </e>
         </e>
       </e>
+      <e p="Schedulerer.Infrastructure.Migrations" t="IncludeRecursive">
+        <e p="Schedulerer.Infrastructure.Migrations.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Schedulerer.Infrastructure.Migrations.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Schedulerer.Web" t="IncludeRecursive">
+        <e p="Controllers" t="Include">
+          <e p="ChildrenController.cs" t="Include" />
+        </e>
+        <e p="OpenApi" t="Include">
+          <e p="OpenApiExtensions.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Schedulerer.Web.csproj" t="IncludeRecursive" />
+        <e p="Startup.cs" t="Include" />
+        <e p="WeatherForecast.cs" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="mono_crash.mem.12315.1.blob" t="Include" />
+        <e p="mono_crash.mem.13182.1.blob" t="Include" />
+        <e p="mono_crash.mem.13734.1.blob" t="Include" />
+        <e p="mono_crash.mem.18263.1.blob" t="Include" />
+        <e p="mono_crash.mem.18661.1.blob" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Schedulerer.Web.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="Schedulerer.sln" t="IncludeFlat" />
       <e p="Solution Items" t="Include" />
+      <e p="Tests" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

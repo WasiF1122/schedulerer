@@ -11,6 +11,7 @@ namespace Schedulerer.Domain
 
         public override Guid Id { get; protected set; }
         public Name Name { get; protected set; }
+        
         public Age Age { get; protected set; }
         public Routine Routine => Age < 5 ? Routine.Morning : Routine.Afternoon;
         public IReadOnlyCollection<Activity> Activities => _activities.AsReadOnly();
